@@ -78,7 +78,8 @@ class Home extends StatelessWidget {
   }
 
   Future<void> _addUser() async {
-    final CollectionReference ref = FirebaseFirestore.instance.collection('users/YFJujGZ5XGFXURSCk8hX/friends');
+    final CollectionReference ref = FirebaseFirestore.instance
+        .collection('users/YFJujGZ5XGFXURSCk8hX/friends');
 
     try {
       await ref.add({"first_name": "John", "last_name": "Doe", "age": 42});
